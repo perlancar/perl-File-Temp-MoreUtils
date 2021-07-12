@@ -20,14 +20,15 @@ our %SPEC;
 $SPEC{tempfile_named} = {
     v => 1.1,
     summary => 'Try to create a temporary file with certain name '.
-        '(but used .tmp1, .tmp2, ... suffix if already exists) ',
+        '(but used .1, .2, ... suffix if already exists) ',
     description => <<'_',
 
 Unlike <pm:File::Temp>'s `tempfile()` which creates a temporary file with a
 unique random name, this routine tries to create a temporary file with a
 specific name, but adds a counter suffix when the specified name already exists.
-This is often desirable in the case when we want the temporary file to have
-a name similarity with another file.
+Care has been taken to avoid race condition (using `O_EXCL` flag of `sysopen`).
+This is often desirable in the case when we want the temporary file to have a
+name similarity with another file.
 
 And like <pm:File::Temp>'s `tempfile()`, will return:
 
