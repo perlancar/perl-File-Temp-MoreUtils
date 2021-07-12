@@ -133,6 +133,9 @@ sub tempfile_named {
 1;
 #ABSTRACT: Provide more routines related to creating temporary files/dirs
 
+=head1 SYNOPSIS
+
+
 =head1 SEE ALSO
 
 L<File::Temp>
