@@ -1,3 +1,11 @@
+0.003   2021-07-13  Released-By: PERLANCAR; Urgency: medium
+
+	- [test] Add test.
+
+	- [bugfix] D'oh, don't use stringy $!, d'oh, as the error message is
+          localized (RT#137587).
+
+
 0.002   2021-07-12  Released-By: PERLANCAR; Urgency: low
 
 	- No functional changes.
