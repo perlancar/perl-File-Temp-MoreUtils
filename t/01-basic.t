@@ -34,6 +34,8 @@ subtest tempfile_named => sub {
 
         like([tempfile_named(name => "a", dir=>undef)]->[1], qr{[/\\]a\z});
         like([tempfile_named(name => "a", dir=>undef)]->[1], qr{[/\\]a\.1\z});
+
+        dies_ok { tempfile_named(name => "a", dir=>"$tempdir/noexist") } "dir doesn't exist -> dies";
     };
 
     subtest "suffix_start arg" => sub {
