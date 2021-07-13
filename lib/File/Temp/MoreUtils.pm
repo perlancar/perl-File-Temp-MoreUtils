@@ -9,6 +9,7 @@ use 5.010001; # for // & state var
 use strict;
 use warnings;
 
+use Errno 'EEXIST';
 use Fcntl ':DEFAULT';
 use File::Temp ();
 
@@ -122,7 +123,7 @@ sub tempfile_named {
         if (sysopen $fh, $name, O_CREAT | O_CREAT | O_EXCL) {
             return ($fh, $name);
         }
-        unless ($! =~ /File exists/) {
+        unless ($! == EEXIST) {
             die "tempfile_named(): Can't create temporary file '$name': $!";
         }
         if ($counter++ > 10_000) {
