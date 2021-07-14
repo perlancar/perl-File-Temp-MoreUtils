@@ -1,3 +1,8 @@
+0.004   2021-07-14  Released-By: PERLANCAR; Urgency: medium
+
+	- Add function: tempdir_named().
+
+
 0.003   2021-07-13  Released-By: PERLANCAR; Urgency: medium
 
 	- [test] Add test.
