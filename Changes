@@ -3,7 +3,7 @@
 	- No functional changes.
 
         - [upload] Reupload to CPAN as MetaCPAN thinks 0.002 is the latest
-          version.
+          version (RT#137756).
 
 
 0.004   2021-07-14  Released-By: PERLANCAR; Urgency: medium
